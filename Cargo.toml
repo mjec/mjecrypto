@@ -1,0 +1,16 @@
+[package]
+name = "mjecrypto"
+version = "0.1.0"
+authors = ["Michael Cordover <mjecrypto@mjec.net>"]
+edition = "2018"
+publish = false
+
+[features]
+benchmark = []
+benchmark-comparison = ["benchmark", "rust-crypto"]
+
+[dependencies]
+rust-crypto = {version = "0.2.36", optional = true}
+
+[dev-dependencies]
+hex = "0.3.2"
