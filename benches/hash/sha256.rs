@@ -31,33 +31,41 @@ mod comparison {
 
     #[bench]
     fn becnhmark_0_empty(b: &mut Bencher) {
+        let mut out: [u8; 32] = [0; 32];
         b.iter(|| {
             let mut hasher = Sha256::new();
             hasher.input(&test_strings::EMPTY);
+            hasher.result(&mut out);
         });
     }
 
     #[bench]
     fn becnhmark_1_eight_bytes(b: &mut Bencher) {
+        let mut out: [u8; 32] = [0; 32];
         b.iter(|| {
             let mut hasher = Sha256::new();
             hasher.input(&test_strings::EIGHT_BYTES);
+            hasher.result(&mut out);
         });
     }
 
     #[bench]
     fn becnhmark_2_one_kb(b: &mut Bencher) {
+        let mut out: [u8; 32] = [0; 32];
         b.iter(|| {
             let mut hasher = Sha256::new();
             hasher.input(&test_strings::ONE_KB);
+            hasher.result(&mut out);
         });
     }
 
     #[bench]
     fn becnhmark_3_one_mb(b: &mut Bencher) {
+        let mut out: [u8; 32] = [0; 32];
         b.iter(|| {
             let mut hasher = Sha256::new();
             hasher.input(&test_strings::ONE_MB);
+            hasher.result(&mut out);
         });
     }
 }
