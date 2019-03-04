@@ -3,22 +3,22 @@ use mjecrypto::hash::sha256::hash;
 use test::Bencher;
 
 #[bench]
-fn becnhmark_0_empty(b: &mut Bencher) {
+fn benchmark_0_empty(b: &mut Bencher) {
     b.iter(|| hash(&test_strings::EMPTY));
 }
 
 #[bench]
-fn becnhmark_1_eight_bytes(b: &mut Bencher) {
+fn benchmark_1_eight_bytes(b: &mut Bencher) {
     b.iter(|| hash(&test_strings::EIGHT_BYTES));
 }
 
 #[bench]
-fn becnhmark_2_one_kb(b: &mut Bencher) {
+fn benchmark_2_one_kb(b: &mut Bencher) {
     b.iter(|| hash(&test_strings::ONE_KB));
 }
 
 #[bench]
-fn becnhmark_3_one_mb(b: &mut Bencher) {
+fn benchmark_3_one_mb(b: &mut Bencher) {
     b.iter(|| hash(&test_strings::ONE_MB));
 }
 
@@ -30,7 +30,7 @@ mod comparison {
     use test::Bencher;
 
     #[bench]
-    fn becnhmark_0_empty(b: &mut Bencher) {
+    fn benchmark_0_empty(b: &mut Bencher) {
         let mut out: [u8; 32] = [0; 32];
         b.iter(|| {
             let mut hasher = Sha256::new();
@@ -40,7 +40,7 @@ mod comparison {
     }
 
     #[bench]
-    fn becnhmark_1_eight_bytes(b: &mut Bencher) {
+    fn benchmark_1_eight_bytes(b: &mut Bencher) {
         let mut out: [u8; 32] = [0; 32];
         b.iter(|| {
             let mut hasher = Sha256::new();
@@ -50,7 +50,7 @@ mod comparison {
     }
 
     #[bench]
-    fn becnhmark_2_one_kb(b: &mut Bencher) {
+    fn benchmark_2_one_kb(b: &mut Bencher) {
         let mut out: [u8; 32] = [0; 32];
         b.iter(|| {
             let mut hasher = Sha256::new();
@@ -60,7 +60,7 @@ mod comparison {
     }
 
     #[bench]
-    fn becnhmark_3_one_mb(b: &mut Bencher) {
+    fn benchmark_3_one_mb(b: &mut Bencher) {
         let mut out: [u8; 32] = [0; 32];
         b.iter(|| {
             let mut hasher = Sha256::new();
