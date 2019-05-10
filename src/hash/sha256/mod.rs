@@ -19,6 +19,7 @@ impl HashState {
     }
 
     fn update(&mut self, chunk: &[u32; 16]) {
+        #![allow(clippy::many_single_char_names)]
         let mut a: u32 = self.result[0];
         let mut b: u32 = self.result[1];
         let mut c: u32 = self.result[2];
