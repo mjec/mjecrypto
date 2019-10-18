@@ -35,7 +35,7 @@ mod comparison {
         b.iter(|| {
             let mut hasher = Sha256::new();
             hasher.input(&test_strings::EMPTY);
-            hasher.result(&mut out);
+            hasher.result(&mut out)
         });
     }
 
@@ -45,7 +45,7 @@ mod comparison {
         b.iter(|| {
             let mut hasher = Sha256::new();
             hasher.input(&test_strings::EIGHT_BYTES);
-            hasher.result(&mut out);
+            hasher.result(&mut out)
         });
     }
 
@@ -55,7 +55,7 @@ mod comparison {
         b.iter(|| {
             let mut hasher = Sha256::new();
             hasher.input(&test_strings::ONE_KB);
-            hasher.result(&mut out);
+            hasher.result(&mut out)
         });
     }
 
@@ -65,7 +65,7 @@ mod comparison {
         b.iter(|| {
             let mut hasher = Sha256::new();
             hasher.input(&test_strings::ONE_MB);
-            hasher.result(&mut out);
+            hasher.result(&mut out)
         });
     }
 }
