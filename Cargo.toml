@@ -1,6 +1,6 @@
 [package]
 name = "mjecrypto"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Michael Cordover <mjecrypto@mjec.net>"]
 edition = "2018"
 publish = false
@@ -11,6 +11,11 @@ benchmark-comparison = ["benchmark", "rust-crypto"]
 
 [dependencies]
 rust-crypto = {version = "0.2.36", optional = true}
+phf = "0.8"
 
 [dev-dependencies]
 hex = "0.3.2"
+clap = "2.33.0"
+
+quickcheck = "0.8"
+quickcheck_macros = "0.8"
