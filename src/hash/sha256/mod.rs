@@ -84,7 +84,7 @@ impl HashState {
 /// Hash some bytes with SHA256; output is a string of bytes, always big endian.
 ///
 /// ```rust
-/// use mjecrypto::hash::sha256::hash;
+/// # use mjecrypto::hash::sha256::hash;
 /// assert_eq!(
 ///     hash(b"abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq"),
 ///     [
